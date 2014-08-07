@@ -43,15 +43,15 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'ingydotnet/yaml-vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-ft-clojure'
-NeoBundle 'fuenor/qfixhowm', '8915c5'
+NeoBundle 'fuenor/qfixhowm' ", '8915c5'
+NeoBundle 'tyru/open-browser.vim'
 " gauche
 " not maintained
 NeoBundle 'aharisu/vim_goshrepl'
 NeoBundle 'aharisu/vim-gdev'
 
-"NeoBundle 'mattn/habatobi-vim'
-
-" thinca/vim-quickrun'
+" NeoBundle 'mattn/habatobi-vim'
+" NeoBundle 'thinca/vim-quickrun'
 " NeoBundle 'kana/vim-metarw'
 " NeoBundle 'ujihisa/neco-ghc/'
 
@@ -59,6 +59,12 @@ NeoBundle 'aharisu/vim-gdev'
 filetype plugin indent on
 filetype on
 
+
+" memo.
+" http://sangoukan.xrea.jp/cgi-bin/tDiary/?date=20120227
+" 使い分けに迷った場合は、通常はnoremapを使い、
+" プラグインが提供しているような<Plug>を含むキーシーケンスへマッピングする場合はmap系を
+" 使えばおおむね問題ないでしょう。
 
 " クリップボードから貼り付け
 " inoremap <C-r>* <C-o>:set paste<CR><C-r>*<C-o>:set nopaste<CR>
@@ -132,6 +138,12 @@ let home_fileformat = 'unix'
 let QFixHowm_FileType = 'markdown'
 let QFixHowm_RecentMode = 2
 let QFixHowm_ReminderDefault_Schedule = 1
+
+" open browser.vim
+" 
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
 
 
 " " NeoBundle 'Shougo/neocomplcache'
