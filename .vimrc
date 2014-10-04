@@ -16,6 +16,9 @@ else
   " oh!
 endif
 
+exec "set rpt+=".globalpath($GOPATH, "src/github.com/nsf/gocode/vim")
+set completeopt=menu,preview
+
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -114,6 +117,8 @@ set termencoding=utf-8
 set modeline
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd Filetype go setlocal noexpandtab enc=utf-8 fenc=utf-8
+autocmd BufRead,BufNewFile *.brm setf clojure
 
 vmap <CR> <Plug>(gosh_repl_send_block)
 
