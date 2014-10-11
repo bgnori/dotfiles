@@ -122,6 +122,8 @@ autocmd BufRead,BufNewFile *.brm setf clojure
 
 vmap <CR> <Plug>(gosh_repl_send_block)
 
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
 " Syntastic
 
 let g:syntastic_enable_signs=1
